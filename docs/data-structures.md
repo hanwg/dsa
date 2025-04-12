@@ -72,6 +72,7 @@ int num = ...
 
 boolean contains = map.containsKey(num);
 
+value = map.getOrDefault(key, defaultValue);
 map.keySet();
 map.values();
 ```
