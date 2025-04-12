@@ -102,9 +102,11 @@ Every operation is O(1).
 
 ```
 // smallest to largest (natural order)
+// min-heap where smallest element is at the top of the binary tree
 PriorityQueue<Integer> queue = new PriorityQueue<>();
 
 // custom ordering
+// e.g. max-heap where largest element is at the top of the binary tree
 PriorityQueue<Integer> queue = new PriorityQueue<>((Integer c1, Integer c2) ->
     Integer.compare(c2, c1) // largest to smallest
     );
