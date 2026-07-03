@@ -2,7 +2,6 @@ package top.hanwg.dsa.stacks;
 
 import org.junit.jupiter.api.Assertions;
 
-import java.util.Arrays;
 import java.util.Stack;
 
 // #739 medium
