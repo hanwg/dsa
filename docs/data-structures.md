@@ -110,6 +110,7 @@ PriorityQueue<Integer> queue = new PriorityQueue<>();
 PriorityQueue<Integer> queue = new PriorityQueue<>((Integer c1, Integer c2) ->
     Integer.compare(c2, c1) // largest to smallest
     );
+see also: Collections.reverseOrder()
 
 // enqueue
 queue.add(num);
