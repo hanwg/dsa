@@ -22,15 +22,10 @@ public class TopKFrequentElements {
         Set<Map.Entry<Integer, Integer>> entrySet = map.entrySet();
 
         // min-heap
-        PriorityQueue<Map.Entry<Integer, Integer>> maxHeap = new PriorityQueue<>((entry1, entry2) -> {
-            return entry2.getValue().compareTo(entry1.getValue());
-        });
+        PriorityQueue<Map.Entry<Integer, Integer>> maxHeap = new PriorityQueue<>((entry1, entry2) -> Integer.compare(entry2.getValue(), entry1.getValue()));
 
         map.entrySet()
-                .stream()
-                .forEach(entry -> {
-                    maxHeap.add(entry);
-                });
+                .forEach(maxHeap::add);
 
         int[] answer = new int[k];
         for (int i = 0; i < k; i++) {
@@ -44,11 +39,11 @@ public class TopKFrequentElements {
     public static void main(String[] args) {
         TopKFrequentElements solution = new TopKFrequentElements();
 
-        int[] answer = solution.maxHeap(new int[] { 1,1,1,2,2,3 }, 2);
+        int[] answer = solution.maxHeap(new int[]{1, 1, 1, 2, 2, 3}, 2);
         Arrays.sort(answer);
-        Assertions.assertArrayEquals(new int[] { 1, 2 }, answer);
+        Assertions.assertArrayEquals(new int[]{1, 2}, answer);
 
-        answer = solution.maxHeap(new int[] { 1 }, 1);
-        Assertions.assertArrayEquals(new int[] { 1 }, answer);
+        answer = solution.maxHeap(new int[]{1}, 1);
+        Assertions.assertArrayEquals(new int[]{1}, answer);
     }
 }
