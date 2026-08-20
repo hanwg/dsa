@@ -67,7 +67,7 @@ Find the *k* largest, smallest, or most frequent elements.
 1) Iterate through each element.
 2) For each subsequent element, insert it into the heap.
 3) Compare the element with the top heap element.
-3) If greater (for min-heap), pop from the heap and insert the element.
+4) If greater (for min-heap), pop from the heap and insert the element.
 
 ---
 

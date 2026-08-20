@@ -23,6 +23,17 @@ stringBuilder.append("string-to-be-appended");
 stringBuilder.insert(0, "string-to-be-prepended");
 ```
 
+```
+smallest = Math.min(a, b)
+largest = Math.max(a, b)
+```
+
+```
+Integer.compare(a, b)
+Comparator.reverseOrder()
+Comparator.comparingInt(Object::function)
+```
+
 # Arrays
 
 ## Commonly used functions
@@ -57,11 +68,6 @@ int[] splice = Arrays.copyOfRange(int[] src, int startIndex, int endIndexExclusi
 ```
 
 ## Big O
-
-| Operation       | Big O |
-|-----------------|-------|
-| lookup          | O(1)  |
-| insert / delete | O(n)  |
 
 # Map / HashMap
 
@@ -98,7 +104,7 @@ set.remove(num);
 
 Every operation is O(1).
 
-# PriorityQueue (Binary heap)
+# PriorityQueue (min heap)
 
 ```
 // smallest to largest (natural order)
